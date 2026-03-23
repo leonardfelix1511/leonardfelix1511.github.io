@@ -1,0 +1,171 @@
+/* Import Google Fonts for modern font */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --pistachio: #98FB98;
+    --terracotta: #E2725B;
+    --golden-honey: #FFD700;
+    --dark-chocolate: #3E2723;
+    --background-light: #FDFBF8;
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-light);
+    color: var(--dark-chocolate);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+    letter-spacing: 0.04em;
+    margin-top: 0;
+    color: var(--dark-chocolate);
+    text-align: center;
+}
+
+p, li, a, span, div {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--terracotta);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--golden-honey);
+}
+
+/* Color blocking sections */
+.section-pistachio,
+.section-terracotta,
+.section-light {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.section-pistachio {
+    background-color: var(--pistachio);
+    color: var(--dark-chocolate);
+}
+
+.section-terracotta {
+    background-color: var(--terracotta);
+    color: #ffffff;
+}
+
+.section-light {
+    background-color: var(--background-light);
+    color: var(--dark-chocolate);
+}
+
+.section-pistachio h1,
+.section-terracotta h1,
+.section-light h1,
+.section-pistachio h2,
+.section-terracotta h2,
+.section-light h2,
+.section-pistachio h3,
+.section-terracotta h3,
+.section-light h3 {
+    color: inherit;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dropbtn {
+    background-color: var(--background-light);
+    color: var(--dark-chocolate);
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--terracotta);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropbtn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--dark-chocolate);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #fff6d9;
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    background-color: var(--background-light);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid var(--terracotta);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.dropdown-content a {
+    color: var(--dark-chocolate);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ffd7b7;
+}
+
+.dropdown-content a:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-content a:last-child {
+    border-radius: 0 0 8px 8px;
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #fff7c4;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+footer {
+    background-color: var(--dark-chocolate);
+    color: #FDFBF8;
+    text-align: center;
+    padding: 18px 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</content>
+<parameter name="filePath">/Users/leo/Desktop/html lernen/style.css
