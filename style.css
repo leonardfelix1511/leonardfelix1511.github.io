@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --pistachio: #98FB98;
+    --soft-peach: #FFD8B1;
     --terracotta: #E2725B;
     --golden-honey: #FFD700;
     --dark-chocolate: #3E2723;
@@ -53,7 +53,7 @@ a:hover {
 }
 
 .section-pistachio {
-    background-color: var(--pistachio);
+    background-color: var(--soft-peach);
     color: var(--dark-chocolate);
 }
 
