@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+}
+
 body {
     font-family: 'Urbanist', sans-serif;
     background-color: var(--oat-milk);
@@ -21,6 +25,101 @@ body {
     padding-top: 80px;
     line-height: 1.6;
     letter-spacing: 0.5px;
+}
+
+.page-main {
+    position: relative;
+}
+
+.section-1 {
+    width: 100%;
+    padding: 80px 40px;
+    margin: 0 0 60px;
+    background-color: var(--icy-blue);
+    color: var(--charcoal-teal);
+    position: relative;
+    z-index: 5;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: minmax(320px, 45%) minmax(320px, 55%);
+    align-items: start;
+    column-gap: 0;
+}
+
+.hero-panel {
+    position: sticky;
+    top: 80px;
+    align-self: start;
+    min-height: calc(100vh - 80px);
+    background-image: url('eisladen.jpeg');
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+}
+
+.page-content {
+    padding: 40px;
+}
+
+.section-2,
+.section-3 {
+    position: relative;
+    z-index: 2;
+    margin: 40px 0 0;
+    width: calc(100% + 40px);
+    margin-left: -40px;
+    padding: 80px 40px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.section-2 {
+    background-color: rgba(245, 245, 220, 0.88);
+    color: var(--charcoal-teal);
+}
+
+.section-3 {
+    background-color: rgba(255, 111, 97, 0.92);
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-panel {
+        position: relative;
+        top: 0;
+        min-height: 360px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+
+    .section-2,
+    .section-3 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-panel {
+        position: relative;
+        top: 0;
+        min-height: 360px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
 }
 
 .top-nav {
@@ -41,7 +140,7 @@ body {
 .top-nav .logo {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 36px;
     color: var(--charcoal-teal);
     text-decoration: none;
     justify-self: center;

@@ -37,31 +37,45 @@
 			<a class="nav-item" href="#">Beispielmenüpunkt</a>
 		</nav>
 	</header>
-
+<main class="page-main">
 <section class="section-1">
 	<h2>Willkommen bei Eis am Kreis!</h2>
 	<h3>Dein Eiscafé in Neustrelitz</h3>
 	
 	<p>Entdecke die süße Welt von Eis am Kreis, deinem Eiscafé in Neustrelitz! Wir bieten eine köstliche Auswahl an Eisspezialitäten, die mit Liebe und den besten Zutaten zubereitet werden. Unser gemütliches Ambiente lädt dich ein, einen entspannten Moment zu genießen, während du unsere frischen Eissorten probierst. Von klassischen Favoriten bis hin zu kreativen saisonalen Kreationen – bei Eis am Kreis ist für jeden Geschmack etwas dabei. Besuche uns am Markt in Neustrelitz und lass dich von unseren leckeren Eisspezialitäten verführen!</p>
 </section>
-<section class="section-2">
-	<h2>Unsere Eissorten</h2>
-	<p>Bei Eis am Kreis findest du eine vielfältige Auswahl an Eissorten, die mit hochwertigen Zutaten und viel Liebe zum Detail hergestellt werden. Unsere Klassiker wie Vanille, Schokolade und Erdbeere sind immer ein Genuss, aber wir bieten auch kreative saisonale Kreationen, die dich überraschen werden. Ob fruchtige Sorbets, cremige Nussvariationen oder ausgefallene Geschmackskombinationen – bei uns ist für jeden Eisliebhaber etwas dabei. Alle unsere	 Eissorten werden täglich frisch zubereitet, um dir das beste Geschmackserlebnis zu bieten. Komm vorbei und entdecke deine neue Lieblingssorte bei Eis am Kreis!</p>
-</section>	
-<section class="section-3">
-	<h2>Besuche uns!</h2>
-	<p>Wir freuen uns darauf, dich bei Eis am Kreis willkommen zu heißen! Unser Eiscafé befindet sich am Markt in Neustrelitz, einem zentralen und leicht erreichbaren Ort. Egal, ob du einen gemütlichen Nachmittag mit Freunden verbringen oder einfach nur eine köstliche Eisspezialität genießen möchtest – bei uns bist du genau richtig. Unser freundliches Team steht bereit, um dir den besten Service zu bieten und dich mit unseren leckeren Eissorten zu verwöhnen. Wir legen großen Wert auf Qualität und Frische, damit du bei jedem Besuch ein unvergessliches Geschmackserlebnis hast. Komm vorbei und lass dich von der süßen Vielfalt bei Eis am Kreis begeistern!</p>
-</section>
+<div class="page-layout">
+	<aside class="hero-panel" aria-hidden="true"></aside>
+	<div class="page-content">
+	<section class="section-2">
+		<h2>Unsere Eissorten</h2>
+		<p>Bei Eis am Kreis findest du eine vielfältige Auswahl an Eissorten, die mit hochwertigen Zutaten und viel Liebe zum Detail hergestellt werden. Unsere Klassiker wie Vanille, Schokolade und Erdbeere sind immer ein Genuss, aber wir bieten auch kreative saisonale Kreationen, die dich überraschen werden. Ob fruchtige Sorbets, cremige Nussvariationen oder ausgefallene Geschmackskombinationen – bei uns ist für jeden Eisliebhaber etwas dabei. Alle unsere	 Eissorten werden täglich frisch zubereitet, um dir das beste Geschmackserlebnis zu bieten. Komm vorbei und entdecke deine neue Lieblingssorte bei Eis am Kreis!</p>
+	</section>	
+	<section class="section-3">
+		<h2>Besuche uns!</h2>
+		<p>Wir freuen uns darauf, dich bei Eis am Kreis willkommen zu heißen! Unser Eiscafé befindet sich am Markt in Neustrelitz, einem zentralen und leicht erreichbaren Ort. Egal, ob du einen gemütlichen Nachmittag mit Freunden verbringen oder einfach nur eine köstliche Eisspezialität genießen möchtest – bei uns bist du genau richtig. Unser freundliches Team steht bereit, um dir den besten Service zu bieten und dich mit unseren leckeren Eissorten zu verwöhnen. Wir legen großen Wert auf Qualität und Frische, damit du bei jedem Besuch ein unvergessliches Geschmackserlebnis hast. Komm vorbei und lass dich von der süßen Vielfalt bei Eis am Kreis begeistern!</p>
+	</section>
 
-
-	<br>
-	<hr>
-	<footer>
-		Eis am Kreis<br>
-		Lena Mühlenberg und Annabell Elgass GbR <br>
-		Am Markt 15 <br>
-		17235 Neustrelitz <br>
-	</footer>
-	
+	</div>
+</div>
+<footer>
+	Eis am Kreis<br>
+	Lena Mühlenberg & Annabell Elgass GbR <br>
+	Markt 15 <br>
+	17235 Neustrelitz <br>
+</footer>
+</main>
+<script>
+	const heroPanel = document.querySelector('.hero-panel');
+	const updateParallax = () => {
+		const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+		const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+		const position = 40 + progress * 40;
+		heroPanel.style.backgroundPosition = `center ${position}%`;
+	};
+	window.addEventListener('scroll', updateParallax);
+	window.addEventListener('resize', updateParallax);
+	updateParallax();
+</script>
 </body>
 </html>
