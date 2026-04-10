@@ -1,4 +1,4 @@
-/* Import Google Fonts for modern font */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Urbanist:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -27,101 +27,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.page-main {
-    position: relative;
-}
-
-.section-1 {
-    width: 100%;
-    padding: 80px 40px;
-    margin: 0 0 60px;
-    background-color: var(--icy-blue);
-    color: var(--charcoal-teal);
-    position: relative;
-    z-index: 5;
-}
-
-.page-layout {
-    display: grid;
-    grid-template-columns: minmax(320px, 45%) minmax(320px, 55%);
-    align-items: start;
-    column-gap: 0;
-}
-
-.hero-panel {
-    position: sticky;
-    top: 80px;
-    align-self: start;
-    min-height: calc(100vh - 80px);
-    background-image: url('eisladen.jpeg');
-    background-size: cover;
-    background-position: center 50%;
-    background-repeat: no-repeat;
-}
-
-.page-content {
-    padding: 40px;
-}
-
-.section-2,
-.section-3 {
-    position: relative;
-    z-index: 2;
-    margin: 40px 0 0;
-    width: calc(100% + 40px);
-    margin-left: -40px;
-    padding: 80px 40px;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
-}
-
-.section-2 {
-    background-color: rgba(245, 245, 220, 0.88);
-    color: var(--charcoal-teal);
-}
-
-.section-3 {
-    background-color: rgba(255, 111, 97, 0.92);
-    color: #ffffff;
-}
-
-@media (max-width: 900px) {
-    .page-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-panel {
-        position: relative;
-        top: 0;
-        min-height: 360px;
-    }
-
-    .page-content {
-        padding: 20px;
-    }
-
-    .section-2,
-    .section-3 {
-        width: 100%;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 900px) {
-    .page-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-panel {
-        position: relative;
-        top: 0;
-        min-height: 360px;
-    }
-
-    .page-content {
-        padding: 20px;
-    }
-}
-
+/* ── Navigation ── */
 .top-nav {
     position: fixed;
     top: 0;
@@ -151,16 +57,9 @@ body {
     gap: 20px;
 }
 
-.top-nav .nav-left {
-    justify-self: center;
-}
-
+.top-nav .nav-left,
 .top-nav .nav-right {
     justify-self: center;
-}
-
-.top-nav nav.nav-left,
-.top-nav nav.nav-right {
     justify-content: center;
     min-width: 180px;
 }
@@ -178,6 +77,64 @@ body {
     color: var(--electric-coral);
 }
 
+/* ── Layout ── */
+.page-main {
+    position: relative;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: minmax(320px, 45%) minmax(320px, 55%);
+    align-items: start;
+    column-gap: 0;
+}
+
+.hero-panel {
+    position: sticky;
+    top: 80px;
+    z-index: 1;
+    align-self: start;
+    min-height: calc(100vh - 80px);
+    background-image: url('eisladen.jpeg');
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+}
+
+.page-content {
+    padding: 40px;
+}
+
+/* ── Sections ── */
+.section-1 {
+    width: 100%;
+    padding: 80px 40px;
+    margin: 0 0 60px;
+    background-color: var(--icy-blue);
+    color: var(--charcoal-teal);
+}
+
+.section-2,
+.section-3 {
+    position: relative;
+    z-index: 2;
+    width: calc(100% + 150px);
+    margin: 30px 0 0 -150px;
+    padding: 40px 40px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.section-2 {
+    background-color: rgba(245, 245, 220, 0.97);
+    color: var(--charcoal-teal);
+}
+
+.section-3 {
+    background-color: rgba(255, 111, 97, 0.98);
+    color: #ffffff;
+}
+
+/* ── Typography ── */
 h1, h2 {
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
@@ -207,62 +164,34 @@ a:hover {
     color: var(--charcoal-teal);
 }
 
-.section-1 {
-    background-color: var(--oat-milk);
-    color: var(--charcoal-teal);
-    width: 100%;
-    padding: 80px 40px;
-    margin: 40px 0;
-}
-.section-2,
-.section-3 {
-    width: 100%;
-    padding: 80px 40px;
-    margin: 40px 0;
-}
-
-.section-2 {
-    background-color: var(--oat-milk);
-    color: var(--charcoal-teal);
-}
-
-.section-3 {
-    background-color: var(--electric-coral);
-    color: #ffffff;
-}
-
-.section-1 {
-    background-color: var(--icy-blue);
-    color: var(--charcoal-teal);
-}
-
-.section-oat-milk h1,
-.section-electric-coral h1,
-.section-icy-blue h1,
-.section-oat-milk h2,
-.section-electric-coral h2,
-.section-icy-blue h2,
-.section-oat-milk h3,
-.section-electric-coral h3,
-.section-icy-blue h3 {
-    color: inherit;
-}
-
-/* Remove rounded corners for Urban Gelato */
-.section-1,
-.section-2,
-.section-3,
-footer {
-    border-radius: 0;
-}
-
-/* Footer styles */
+/* ── Footer ── */
 footer {
     background-color: var(--charcoal-teal);
     color: var(--oat-milk);
     text-align: center;
     padding: 20px 10px;
-    position: static;
-    bottom: 0;
     width: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-panel {
+        position: relative;
+        top: 0;
+        min-height: 360px;
+    }
+
+    .page-content {
+        padding: 20px;
+    }
+
+    .section-2,
+    .section-3 {
+        width: 100%;
+        margin-left: 0;
+    }
 }
