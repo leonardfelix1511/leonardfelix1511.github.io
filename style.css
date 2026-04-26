@@ -16,6 +16,11 @@ html {
   min-height: 100%;
 }
 
+@font-face {
+  font-family: 'Eisladenschrift';
+  src: url('Hershey-Noailles-Futura-Duplex-Bold.otf');
+}
+
 body {
   font-family: 'Urbanist', sans-serif;
   background-color: var(--oat-milk);
@@ -37,24 +42,29 @@ body {
   grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
   align-items: center;
   column-gap: 20px;
-  padding: 16px 24px;
+  padding: 10px;
   background-color: var(--oat-milk);
   border-bottom: 1px solid var(--charcoal-teal);
   z-index: 10000;
 }
 
 .top-nav .logo {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Eisladenschrift', 'Syne', sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: var(--charcoal-teal);
   text-decoration: none;
   justify-self: center;
 }
 
+.navlogo {
+  max-width: 16vw;
+  height: auto;
+}
+
 .top-nav nav {
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 
 .top-nav .nav-left,
@@ -66,11 +76,12 @@ body {
 
 .top-nav .nav-item {
   color: var(--charcoal-teal);
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Eisladenschrift', 'Urbanist', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 3vw, 1.6rem);
 }
 
 .top-nav .nav-item:hover {
@@ -136,17 +147,18 @@ body {
 
 /* ── Typography ── */
 h1, h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Eisladenschrift', 'Syne', sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
   color: var(--charcoal-teal);
   text-align: center;
-  font-weight: 700;
+  font-weight: 1;
 }
 
 h3 {
-  font-family: 'Urbanist', sans-serif;
-  letter-spacing: 0.5px;
+  font-family: 'Eisladenschrift', 'Urbanist', sans-serif;
+  font-size: clamp(0.4rem, 4vw, 1.6rem);
   color: var(--charcoal-teal);
 }
 
@@ -219,7 +231,7 @@ footer {
     min-width: unset;
     justify-self: center;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 12px 20px;
   }
 
