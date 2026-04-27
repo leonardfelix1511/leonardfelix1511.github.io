@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Urbanist", sans-serif;
-  background-color: var(--oat-milk);
+  background-color: var(--icy-blue);
   color: var(--charcoal-teal);
   margin: 0;
   padding: 0;
@@ -130,10 +130,11 @@ main {
 }
 /* ── Sections ── */
 .section-1 {
-  width: 100%;
-  padding: 70px 100px;
-  margin: 30px 0 60px;
-  background-color: var(--icy-blue);
+  text-align: center;
+  width: 80%;
+  padding: 10px 10px;
+  margin: 60px auto;
+  background-color: var(--oat-milk);
   color: var(--charcoal-teal);
 }
 
@@ -171,6 +172,12 @@ main {
   padding-left: 0;
 }
 
+.liste-angebote {
+  background-color: var(--oat-milk);
+  padding: 5px;
+  margin: 0px 350px;
+}
+
 #getränkekarte {
   width: 100%;
   max-width: 50vw;
@@ -192,6 +199,12 @@ main {
   max-width: 400px;
   height: auto;
   margin: 10px 10px;
+}
+
+.contact-info {
+  list-style: none;
+  padding-left: 0;
+  text-align: match-parent;
 }
 
 /* ── Typography ── */
